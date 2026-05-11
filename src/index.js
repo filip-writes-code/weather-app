@@ -1,5 +1,5 @@
-import "./styles.css"
-import { getWeatherData } from "./api.js"
+import "./styles.css";
+import { getWeatherData } from "./api.js";
 
-const test = await getWeatherData('longmont')
-console.log(test)
+const test = await getWeatherData("longmont");
+console.log(test);
