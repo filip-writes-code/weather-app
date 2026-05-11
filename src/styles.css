@@ -1,0 +1,8 @@
+body {
+    min-height: 100vh;
+    background: url("assets/3.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Inter, Helvetica;
+    color: white;
+}
