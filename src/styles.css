@@ -1,8 +1,39 @@
 body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   background: url("assets/3.jpg");
   background-size: cover;
   background-position: center;
   font-family: Inter, Helvetica, sans-serif;
   color: white;
+}
+
+.container {
+  display: flex;
+}
+
+.city-current,
+.current-conditions {
+  padding: 0 20px;
+}
+
+.city-current {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid white;
+}
+
+.city-current .city {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.city-current .current-temp {
+  font-size: 4em;
+  font-weight: 600;
+}
+
+.current-conditions .temp-high-low {
+  display: flex;
 }

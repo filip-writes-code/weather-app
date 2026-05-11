@@ -15,7 +15,7 @@ async function callWeatherApi(location) {
 export async function getWeatherData(location) {
   const apiData = await callWeatherApi(location);
   let processedWeatherData = {
-    location: apiData.resolvedAddress,
+    city: apiData.resolvedAddress,
     tempCurrent: apiData.currentConditions.temp,
     tempMin: apiData.days[0].tempmin,
     tempMax: apiData.days[0].tempmax,
