@@ -12,16 +12,31 @@
     />
   </head>
   <body>
-    <div class="city-current">
-      <div class="current-temp">26</div>
-      <div class="city">Boulder, CO</div>
+    <div class="header">
+      <div class="logo">
+        <h1>WeatherTrek</h1>
+      </div>
+      <div class="nav">
+        <form>
+          <input type="text" id="location" placeholder="Enter location" />
+          <button id="search-btn">GO!</button>
+        </form>
+        <p>Units</p>
+        <input type="checkbox" name="units" id="units" />
+      </div>
     </div>
-    <div class="extra-info">
-      <div class="conditions">Clear</div>
-      <div class="high">High: 32°</div>
-      <div class="low">Low: 19°</div>
-      <div class="wind-speed">Wind: 12mph</div>
-      <div class="wind-gusts">Gusts: 20mph</div>
+    <div class="wrapper">
+      <div class="city-current">
+        <div class="current-temp">26</div>
+        <div class="city">Boulder, CO</div>
+      </div>
+      <div class="extra-info">
+        <div class="conditions">Clear</div>
+        <div class="high">High: 32°</div>
+        <div class="low">Low: 19°</div>
+        <div class="wind-speed">Wind: 12mph</div>
+        <div class="wind-gusts">Gusts: 20mph</div>
+      </div>
     </div>
   </body>
 </html>

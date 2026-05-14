@@ -19,6 +19,26 @@ body {
   align-items: center;
 }
 
+input,
+button {
+  padding: 6px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
 .city-current {
   display: flex;
   flex-direction: column;
