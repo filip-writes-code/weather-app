@@ -10,8 +10,8 @@ export function renderWeather(dataObject) {
   cityName.textContent = dataObject.city;
   currentTemp.textContent = dataObject.tempCurrent;
   conditions.textContent = dataObject.currentConditions;
-  high.textContent = `High: ${dataObject.tempMax}`;
-  low.textContent = `Low: ${dataObject.tempMin}`;
+  high.textContent = `High: ${dataObject.tempMax}°`;
+  low.textContent = `Low: ${dataObject.tempMin}°`;
   windSpeed.textContent = `Wind: ${dataObject.windSpeed}`;
   windGusts.textContent = `Wind: ${dataObject.windGust}`;
 }
