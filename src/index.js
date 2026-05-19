@@ -2,6 +2,8 @@ import "./styles.css";
 import { getWeatherData } from "./api.js";
 import { hideSpinner, renderWeather, showError, showSpinner } from "./dom.js";
 
+const searchBtn = document.getElementById("search-btn");
+
 async function handleWeather(location) {
   showSpinner();
   try {
@@ -14,4 +16,10 @@ async function handleWeather(location) {
   hideSpinner();
 }
 
-handleWeather("boulder co");
+searchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const locationInputField = document.getElementById("location");
+  const location = locationInputField.value;
+  locationInputField.value = "";
+  handleWeather(location);
+});

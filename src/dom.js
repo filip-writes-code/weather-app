@@ -30,4 +30,10 @@ export function hideSpinner() {
 
 export function showError(error) {
   cityName.textContent = error;
+  currentTemp.textContent = "";
+  conditions.textContent = "";
+  high.textContent = "";
+  low.textContent = "";
+  windSpeed.textContent = "";
+  windGusts.textContent = "";
 }
