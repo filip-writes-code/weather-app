@@ -23,3 +23,6 @@ searchBtn.addEventListener("click", (e) => {
   locationInputField.value = "";
   handleWeather(location);
 });
+
+//initial render
+handleWeather("Boulder CO");
