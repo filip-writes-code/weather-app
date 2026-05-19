@@ -1,8 +1,7 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "node:path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
-  mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "main.js",
@@ -10,10 +9,6 @@ export default {
     clean: true,
   },
   dotenv: true,
-  devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/template.html"],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
