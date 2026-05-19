@@ -3,6 +3,7 @@ import { getWeatherData } from "./api.js";
 import { hideSpinner, renderWeather, showError, showSpinner } from "./dom.js";
 
 const searchBtn = document.getElementById("search-btn");
+const unitsToggleSwitch = document.getElementById("units");
 
 export let currentLocation = "Boulder CO";
 export let units = "us";
@@ -25,6 +26,15 @@ searchBtn.addEventListener("click", (e) => {
   currentLocation = locationInputField.value;
   locationInputField.value = "";
   handleWeather(currentLocation);
+});
+
+unitsToggleSwitch.addEventListener("click", () => {
+  if (unitsToggleSwitch.checked) {
+    units = "metric";
+  } else {
+    units = "us";
+  }
+  handleWeather();
 });
 
 //initial render
