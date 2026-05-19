@@ -14,6 +14,9 @@ async function callWeatherApi(location) {
 
 export async function getWeatherData(location) {
   const apiData = await callWeatherApi(location);
+  if (!apiData) {
+    throw new Error("No data found for location");
+  }
   let processedWeatherData = {
     city: apiData.resolvedAddress,
     tempCurrent: apiData.currentConditions.temp,

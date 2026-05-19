@@ -1,6 +1,17 @@
 import "./styles.css";
 import { getWeatherData } from "./api.js";
-import { renderWeather } from "./dom.js";
+import { hideSpinner, renderWeather, showError, showSpinner } from "./dom.js";
 
-const test = await getWeatherData("Boulder CO");
-renderWeather(test);
+async function handleWeather(location) {
+  showSpinner();
+  try {
+    const data = await getWeatherData(location);
+    renderWeather(data);
+  } catch (err) {
+    console.error(err);
+    showError(err.message);
+  }
+  hideSpinner();
+}
+
+handleWeather("boulder co");
