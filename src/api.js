@@ -1,6 +1,8 @@
-async function callWeatherApi(location) {
+import { currentLocation, units } from "./index.js";
+
+async function callWeatherApi() {
   const apiKey = process.env.WEBPACK_API_KEY;
-  const apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&include=current,hours&key=${apiKey}`;
+  const apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${currentLocation}?unitGroup=${units}&include=current,hours&key=${apiKey}`;
   try {
     const response = await fetch(apiUrl);
     if (!response.ok) {

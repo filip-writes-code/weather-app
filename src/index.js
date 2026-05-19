@@ -4,10 +4,13 @@ import { hideSpinner, renderWeather, showError, showSpinner } from "./dom.js";
 
 const searchBtn = document.getElementById("search-btn");
 
-async function handleWeather(location) {
+export let currentLocation = "Boulder CO";
+export let units = "us";
+
+async function handleWeather() {
   showSpinner();
   try {
-    const data = await getWeatherData(location);
+    const data = await getWeatherData(currentLocation);
     renderWeather(data);
   } catch (err) {
     console.error(err);
@@ -19,10 +22,10 @@ async function handleWeather(location) {
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const locationInputField = document.getElementById("location");
-  const location = locationInputField.value;
+  currentLocation = locationInputField.value;
   locationInputField.value = "";
-  handleWeather(location);
+  handleWeather(currentLocation);
 });
 
 //initial render
-handleWeather("Boulder CO");
+handleWeather();
